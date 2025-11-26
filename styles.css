@@ -1,5 +1,138 @@
-body {
-  color: #00741D;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: #00741d;
   font-family: "Chivo Mono", monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   background-color: #000;
+  padding: 1.5rem;
+  margin: 0;
+  width: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+  color: inherit; /* keep your green */
+  transition:
+    color 120ms ease,
+    opacity 120ms ease;
+}
+
+a:hover {
+  color: #005a16;
+}
+
+a:active {
+  color: #004510;
+}
+
+a:visited {
+  color: #006018;
+}
+
+a:focus-visible {
+  outline: 2px solid #00741d;
+  outline-offset: 2px;
+}
+
+.col-1,
+.col-2 {
+  display: contents;
+}
+
+.title {
+  order: 1;
+}
+
+.logo {
+  order: 2;
+}
+
+.intro {
+  order: 3;
+}
+
+.project {
+  order: 4;
+}
+
+.book {
+  order: 5;
+}
+
+#donut {
+  order: 6;
+  display: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+
+  body {
+    padding: 4rem 13rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    column-gap: 4rem;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  #donut {
+    display: block;
+    justify-self: start;
+    align-self: start;
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .col-1,
+  .col-2 {
+    display: block;
+  }
+
+  .logo {
+    justify-content: space-evenly;
+  }
+
+  .project{
+    margin-top: 4rem;
+  }
 }
